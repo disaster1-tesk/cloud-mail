@@ -25,7 +25,9 @@ unless those records have been migrated to another storage backend.
 Production D1 changes belong in new numbered files under
 `mail-worker/migrations/production`. Applied migrations must not be edited.
 Migration `0001_forwarding.sql` upgrades the existing v3.3 database. It is not a
-fresh installation schema. Changes to cached settings also require refreshing
+fresh installation schema. Migration `0002_forwarding_per_user.sql` adds the
+`user_forward` table used by the per-user forwarding rework; the `account_forward`
+table from `0001` is no longer referenced by code and is left in place. Changes to cached settings also require refreshing
 the `setting:` cache through the application initialization/settings flow.
 
 ## Rollback

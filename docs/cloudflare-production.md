@@ -1,7 +1,9 @@
 # Cloudflare production deployment
 
 Production Worker: `cloud-mail`, from `disaster1-tesk/cloud-mail` branch `main`.
-Domains: `mail.happyaether.com` and `mail.zappo.work`.
+Domains: `mail.zappo.work`, `mail.happyaether.com`, `mail.pilotnet.org`,
+`mail.bosslevin.net`, `mail.marleyinfo.net`, `mail.amelieorg.org`,
+`mail.syeda.net`, and `mail.laurencemy.net`.
 
 Cloudflare Workers Builds settings:
 
@@ -29,6 +31,8 @@ fresh installation schema. Migration `0002_forwarding_per_user.sql` adds the
 `user_forward` table used by the per-user forwarding rework; the `account_forward`
 table from `0001` is no longer referenced by code and is left in place. Changes to cached settings also require refreshing
 the `setting:` cache through the application initialization/settings flow.
+Migration `0003_ui_theme.sql` adds the `setting.ui_theme` column required by the
+latest interface settings.
 
 ## Rollback
 

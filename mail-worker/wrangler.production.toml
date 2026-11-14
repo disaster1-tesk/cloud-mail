@@ -22,3 +22,6 @@ run_worker_first = true
 
 [triggers]
 crons = ["0 * * * *"]
+
+[vars]
+domain = ["zappo.work", "happyaether.com", "pilotnet.org", "bosslevin.net", "marleyinfo.net", "amelieorg.org", "syeda.net", "laurencemy.net"]

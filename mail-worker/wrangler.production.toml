@@ -8,6 +8,9 @@ workers_dev = true
 [observability]
 enabled = true
 
+[[send_email]]
+name = "email"
+
 [[d1_databases]]
 binding = "db"
 database_name = "cloud-mail-zappo-db"
